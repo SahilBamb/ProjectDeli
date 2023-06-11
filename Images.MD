@@ -18,3 +18,4 @@ https://github.com/SahilBamb/ProjectDeli/assets/42818731/3200621d-beb0-41e6-ae23
 https://github.com/SahilBamb/ProjectDeli/assets/42818731/25abfffb-860a-4519-8fcb-3f3c2ac705e2
 ![removal ai _tmp-648618855c1dd](https://github.com/SahilBamb/ProjectDeli/assets/42818731/b7f93edd-3bb6-427a-b259-df27e3e410a3)
 https://github.com/SahilBamb/ProjectDeli/assets/42818731/b7f93edd-3bb6-427a-b259-df27e3e410a3
+![removal ai _tmp-648619d971088](https://github.com/SahilBamb/ProjectDeli/assets/42818731/85d3c780-02c6-4106-aeda-cd19c733e961)
