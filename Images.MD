@@ -1,3 +1,4 @@
+![Removal-498](https://github.com/SahilBamb/ProjectDeli/assets/42818731/4a0cec9a-f05a-471a-8f1d-c830b7c41bb8)
 
 ![Hotpot (1)](https://github.com/SahilBamb/ProjectDeli/assets/42818731/c3c4bde7-f690-4a84-8ed5-3969736084b5)
 https://github.com/SahilBamb/ProjectDeli/assets/42818731/c3c4bde7-f690-4a84-8ed5-3969736084b5
