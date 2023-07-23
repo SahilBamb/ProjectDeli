@@ -1,0 +1,17 @@
+<% layout('/layouts/boilerplate') -%>
+
+    <h1>Editing Item</h1>
+    <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+        <img src="<%= item.imgtrans %>">
+        <label for="name">Item Name:</label>
+        <input required type="text" name="name" id="name" value="<%= item.name %>">
+        <label for="category">Category:</label>
+        <input required type="text" name="category" id="category" value="<%= item.category %>">
+        <label for="price">Price:</label>
+        <input required type="text" name="price" id="price" value="<%= item.price %>">
+        <label for="imgtrans">Image URL (Transparent):</label>
+        <input type="text" name="imgtrans" id="imgtrans" value="<%= item.imgtrans %>">
+        <button>Submit</button>
+        <button onclick="preview()">Preview</button>
+        <a href="/items/<%= item._id %>">Go Back</a>
+    </form>

@@ -1,0 +1,40 @@
+  <link rel="stylesheet" type="text/css" href="css/item-cart-previewToolbar.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleguideToolbar.css" />
+  <link rel="stylesheet" type="text/css" href="css/globalsToolbar.css" />
+  <div style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="item-cart-preview" />
+    <div class="toolbar-container-center-horizontal">
+      <div onclick="hide()" class="item-cart-preview toolbar-screen">
+        <div class="pet-preview-slots">
+          <div class="pet-container">
+            <div class="pet-background-card"></div>
+            <div class="pet-slot-3 pet-slot"></div>
+            <div class="pet-slot-2 pet-slot"></div>
+            <div class="pet-slot-1 pet-slot"></div>
+          </div>
+        </div>
+        <div class="item-preview-slots">
+          <div class="item-slot-container">
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+          </div>
+          <div class="item-slot-container">
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+            <div class="item-slot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function hide(){
+      document.getElementById("item-cart-preview").style.display = "none";
+    }
+
+  </script>

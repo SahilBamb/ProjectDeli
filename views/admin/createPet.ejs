@@ -1,0 +1,32 @@
+<% layout('/layouts/boilerplate') -%>
+
+    <form action="/createPetNew" method="POST">
+        <label for="name">Pet Species Name:</label>
+        <input type="text" name="name" id="name">
+        
+        <label for="img">Image URL (Block):</label>
+        <input type="text" name="img" id="img">
+
+        <label for="imgtrans">Image URL (Transparent):</label>
+        <input type="text" name="imgtrans" id="imgtrans">
+
+        <!-- <label for="background">Background Image URL (Transparent):</label>
+        <input type="text" name="background" id="background"> -->
+
+        <!-- <label for="gradLeft">Gradient (Left):</label>
+        <input type="color" id="gradLeft" name="gradLeft" value="#000000">
+
+        <label for="gradRight">Gradient (Right):</label>
+        <input type="color" id="gradRight" name="gradRight" value="#ffffff"> -->
+
+        <input type="submit" value="Create Pet">
+
+    </form>
+    <div>
+        <section id="section">
+                <card>
+                    <name></name>
+                    <img id="xeopet" src="">
+                </card>
+        </section> 
+    </div>

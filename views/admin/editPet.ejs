@@ -1,0 +1,24 @@
+<% layout('/layouts/boilerplate') -%>
+
+    <h1>Editing Pet</h1>
+    <form action="/pets/<%= pet._id %>?_method=PUT" method="POST">
+        <label for="name">Pet Species Name:</label>
+        <input type="text" name="name" id="name" value="<%= pet.name %>">
+        
+        <label for="img">Image URL (Block):</label>
+        <input type="text" name="img" id="img" value="<%= pet.img %>">
+
+        <label for="imgtrans">Image URL (Transparent):</label>
+        <input type="text" name="imgtrans" id="imgtrans" value="<%= pet.imgtrans %>">
+
+        <label for="background">Background Image URL (Transparent):</label>
+        <input type="text" name="background" id="background" value="<%= pet.background %>">
+
+        <label for="gradLeft">Gradient (Left):</label>
+        <input type="color" id="gradLeft" name="gradLeft" value="#000000" value="<%= pet.gridLeft %>">
+
+        <label for="gradRight">Gradient (Right):</label>
+        <input type="color" id="gradRight" name="gradRight" value="#ffffff" value="<%= pet.gridRight %>">
+
+        <input type="submit" value="Save Changes">
+    </form>

@@ -1,0 +1,68 @@
+<% layout('/layouts/boilerplate') -%>
+    <link rel="stylesheet" type="text/css" href="css/sharktooth.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguideDetails.css" />
+    <link rel="stylesheet" type="text/css" href="css/globalsDetails.css" />
+  </head>
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="sharktooth" />
+    <div class="container-center-horizontal">
+      <div class="sharktooth screen">
+        <div class="overlap-group7">
+          <img
+            class="main_-rectangle_-card_shrk"
+            src="img/main-rectangle-card-shrk.png"
+            alt="Main_Rectangle_Card_SHRK"
+          />
+          <div class="card-shrk">
+            <div class="overlap-group6">
+              <header class="header">
+                <h1 class="main-heading-text metropolis-black-white-50px">Aquatic<br />RazorTooth</h1>
+                <p class="lorem-ipsum-is-simpl mclaren-normal-white-12px">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                </p>
+              </header>
+              <img class="line" src="img/line.svg" alt="Line" />
+            </div>
+            <div class="flex-row">
+              <div class="stats-screen">
+                <div class="overlap-group5">
+                  <a href="#inner-rectangle" class="align-self-flex-center"
+                    ><div class="fitness raleway-bold-black-30px">Fitness</div>
+                  </a>
+                  <div class="number number-2 raleway-bold-manhattan-40px"><%= stats.fitness %></div>
+                </div>
+                <div class="overlap-group4">
+                  <div class="happiness raleway-bold-black-30px">Happiness</div>
+                  <div id="happiness" class="number number-2 raleway-bold-manhattan-40px"><%= stats.happiness %></div>
+                </div>
+                <div class="overlap-group">
+                  <div class="ness raleway-bold-black-30px">Goodness</div>
+                  <div id="goodness" class="number number-2 raleway-bold-manhattan-40px"><%= stats.goodness %></div>
+                </div>
+                <div class="overlap-group2">
+                  <div class="adventur-ousness raleway-bold-black-30px">Adventur-ousness</div>
+                  <div id="advness" class="number-1 number-2 raleway-bold-manhattan-40px"><%= stats.advness %></div>
+                </div>
+                <div class="overlap-group">
+                  <div class="ness raleway-bold-black-30px">Luckiness</div>
+                  <div id="luckiness" class="number number-2 raleway-bold-manhattan-40px"><%= stats.luckiness %></div>
+                </div>
+                <div class="overlap-group-1">
+                  <img class="six-sided-dice-1" src="img/six-sided-dice-1-3.svg" alt="six-sided-dice 1" />
+                  <div onclick="location.reload()" class="randomize raleway-bold-white-25px">Randomize</div>
+                </div>
+              </div>
+              <div class="buttons_shrk">
+                <div class="overlap-group-2">
+                  <div class="adopt-pet sourcesanspro-normal-white-20px">Adopt Pet</div>
+                </div>
+                <div class="overlap-group1"><div class="view-variants">View Variants</div></div>
+              </div>
+            </div>
+          </div>
+          <img class="sharktooth_img" src="img/sharktooth-img.png" alt="Sharktooth_img" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

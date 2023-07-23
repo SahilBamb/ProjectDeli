@@ -1,0 +1,65 @@
+<% layout('/layouts/boilerplate') -%>
+    <link rel="stylesheet" type="text/css" href="css/pando.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguideDetails.css" />
+    <link rel="stylesheet" type="text/css" href="css/globalsDetails.css" />
+  </head>
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="pando" />
+    <div class="container-center-horizontal">
+      <div class="pando screen">
+        <div class="overlap-group7">
+          <div class="card-pndo">
+            <div class="overlap-group6">
+              <header class="header">
+                <h1 class="main-heading-text metropolis-black-white-50px">Newfound<br />Pando</h1>
+                <p class="lorem-ipsum-is-simpl mclaren-normal-white-12px">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                </p>
+              </header>
+              <img class="line" src="img/line.svg" alt="Line" />
+            </div>
+            <div class="flex-row">
+              <div class="stats-screen">
+                <div class="overlap-group4">
+                  <a href="#inner-rectangle" class="align-self-flex-center"
+                    ><div class="fitness raleway-bold-black-30px">Fitness</div>
+                  </a>
+                  <div class="number number-2 raleway-bold-manhattan-40px"><%= stats.fitness %></div>
+                </div>
+                <div class="overlap-group3">
+                  <div class="happiness raleway-bold-black-30px">Happiness</div>
+                  <div class="number number-2 raleway-bold-manhattan-40px"><%= stats.happiness %></div>
+                </div>
+                <div class="overlap-group">
+                  <div class="ness raleway-bold-black-30px">Goodness</div>
+                  <div class="number number-2 raleway-bold-manhattan-40px"><%= stats.goodness %></div>
+                </div>
+                <div class="overlap-group1">
+                  <div class="adventur-ousness raleway-bold-black-30px">Adventur-ousness</div>
+                  <div class="number-1 number-2 raleway-bold-manhattan-40px"><%= stats.advness %></div>
+                </div>
+                <div class="overlap-group">
+                  <div class="ness raleway-bold-black-30px">Luckiness</div>
+                  <div class="number number-2 raleway-bold-manhattan-40px"><%= stats.luckiness %></div>
+                </div>
+                <div class="overlap-group5">
+                  <img class="six-sided-dice-1" src="img/six-sided-dice-1-5.svg" alt="six-sided-dice 1" />
+                  <div onclick="location.reload()" class="randomize raleway-bold-white-25px">Randomize</div>
+                </div>
+              </div>
+              <div class="buttons_pndo">
+                <div class="overlap-group-1">
+                  <div class="adopt-pet sourcesanspro-normal-white-20px">Adopt Pet</div>
+                </div>
+                <div class="overlap-group1-1">
+                  <img class="view-variants" src="img/view-variants.png" alt="View Variants" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <img class="pando_img" src="img/pando-img.png" alt="Pando_img" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

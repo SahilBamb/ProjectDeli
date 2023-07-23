@@ -1,0 +1,27 @@
+<% layout('/layouts/boilerplate') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="display-2 mt-4">Login Page</h2>
+        <form class="row g-3 mt-2" action="/profile/login" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="name" class="form-control" name="name" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

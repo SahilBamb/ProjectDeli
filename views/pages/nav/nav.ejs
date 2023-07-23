@@ -1,0 +1,50 @@
+  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="css/Navglobals.css" />
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="navbar" />
+    <div class="nav-container-center-horizontal" style="margin-bottom: 0pc;">
+      <div class="navbar screen" >
+        <div class="nav">
+          <div class="nav-overlap-group3">
+            <div class="nav-overlap-group">
+              <div class="brown"></div>
+              <div class="white"></div>
+            </div>
+            <div id="brown-double-box" class="brown-double-box">
+              <div class="nav-overlap-group1"><img class="x-icon" src="img/chest-icon@2x.png" alt="chest-icon" /></div>
+            </div>
+            <div id="orange-double-box" class="orange-double-box">
+              <div class="nav-overlap-group2"><img class="x-icon" src="img/paw-icon@2x.png" alt="paw-icon" /></div>
+            </div>
+            <div class="number"><%= user.money %></div>
+            <h1 id="XeoTitle" class="title">Xeopets</h1>
+            <div class="ellipse-1"></div>
+            <div id="XeoTitle2 "class="xeos"><%= user.name %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+
+  window.addEventListener('load', () => {
+
+    const petsLink = document.getElementById('orange-double-box');
+    petsLink.addEventListener('click', () => {
+      window.location.href = '/pets';
+    });
+
+    const itemsLink = document.getElementById('brown-double-box');
+    itemsLink.addEventListener('click', () => {
+      window.location.href = '/items';
+    });
+
+    const homeLink = document.getElementById('XeoTitle');
+    homeLink.addEventListener('click', () => {
+      window.location.href = '/home';
+    });
+
+
+  });
+
+</script>

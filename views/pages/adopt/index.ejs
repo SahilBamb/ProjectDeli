@@ -1,0 +1,99 @@
+<% layout('/layouts/boilerplate') -%>
+    <link rel="stylesheet" type="text/css" href="css/adopt-store.css" />
+    <link rel="stylesheet" type="text/css" href="css/adopt-styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/adopt-globals.css" />
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="adopt-store" />
+    <div class="container-center-horizontal">
+      <div class="adopt-store screen">
+        <div class="overlap-group4">
+          <h1 class="main-title">Adopt a Xeopet</h1>
+          <img class="top-splash-image" src="img/top-splash-image.png" alt="Top-Splash-Image" />
+          <div class="overlap-group-container">
+            <div class="overlap-group3">
+              <form id="AdoptPet" method="get" action="/details">
+              <input
+                readonly
+                id="pet-input"
+                maxlength="10"
+                class="top-placeholder maplestorybold-15px"
+                name="petName"
+                type="text"
+              />
+            </div>
+            <div class="overlap-group2" onclick="document.getElementById('AdoptPet').submit();"><div class="adopt-your-xeo">Adopt Your Xeo</div></div>
+            </form>
+          </div>
+          <div class="top-boxes">
+            <% const boxes = ["top-right-box","top-right-middle-box","top-left-middle-box","top-right-box-1"] %>
+            <% let x = 0;
+            let activePets = pets.filter(pet => !pet.inactive);
+            let inActivePets = pets.filter(pet => pet.inactive);
+            console.log("Inactive Pets: ", inActivePets); 
+            boxes.forEach(box => { 
+              let pet = activePets[Math.min(activePets.length-1,x++)]
+              %>
+              <div 
+              onclick="selectPet('<%= pet.name %>')"
+              style="
+              opacity: 1;
+              background-image: url('<%= pet.img %>');
+              background-size: cover;"
+              class="pet-box <%= box %>"></div>
+            <% }) %>
+          </div>
+          <div class="middle-feature">
+            <p class="middle-text">
+              Available Pets Are Cycled Every Month&nbsp;&nbsp;(Next Month These Pets Will be Gone!)
+            </p>
+            <img class="middle-white-line" src="img/middle-white-line.svg" alt="Middle-White-Line" />
+          </div>
+          <p class="exclusive-pets-you-cant-have-yet maplestoryotf-light-black-15px">
+            Exclusive Pets You Can’t Have (Yet)
+          </p>
+          <div class="bottom-boxes">
+            <% 
+            x = 0;
+            const boxes2 = ["bottom-right-box","bottom-right-middle-box","bottom-left-middle-box","bottom-left-box"]; 
+            boxes2.forEach(box => {  
+              if (x >= inActivePets.length) {return;}
+              let pet = inActivePets[Math.min(inActivePets.length-1,x++)]
+              %>
+              <div 
+                class="<%= box %>"
+                style="
+                filter: grayscale(50%);
+                opacity: 1;
+                background-image: url('<%= pet.img %>');
+                background-size: cover;"
+                ></div>
+            <%})%>
+          </div>
+          <div class="flex-row">
+            <div class="flex-col">
+              <div class="pets-available-next-month maplestoryotf-light-black-15px">Pets Available Next Month</div>
+              <div class="overlap-group">
+                <input
+                  class="bottom-placeholder maplestoryotf-light-black-15px"
+                  name="bottom-placeholder"
+                  placeholder="Hm... maybe if you type a secret password you could..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="overlap-group1"><div class="see-all-pets">See All Pets</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<script>
+  function selectPet(petName){
+    document.getElementById("pet-input").value = petName;
+  }
+
+  function AdoptPet(petName){
+    console.log(petName);
+  }
+</script>

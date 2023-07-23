@@ -1,0 +1,128 @@
+<% layout('/layouts/boilerplate') -%>
+  <link rel="stylesheet" type="text/css" href="css/profile-page.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleguide-profile.css" />
+  <link rel="stylesheet" type="text/css" href="css/globals-profile.css" />
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="profile-page" />
+    <div class="container-center-horizontal">
+      <div class="profile-page screen">
+        <div class="overlap-group">
+          <div class="main-card-body"></div>
+          <img class="bottom-left-line" src="img/bottom-left-line.svg" alt="Bottom-Left-Line" />
+          <div class="left-card-body"></div>
+          <%
+            let idx = 0;
+            if (typeof(nickname) === 'undefined') {
+              var nickname = realpets[0].nickname;
+            }
+            let mainPet = realpets.find(p => (p.nickname == nickname));
+            let mainPetSpecies = pets.find(p => (p.id == mainPet.species));   
+            %>
+              <div 
+                class="main-image"
+                onclick=""
+                style="
+                  opacity: 1;
+                  background-position: center;
+                  background-image: url('<%= mainPetSpecies.img %>');
+                  background-size: cover;">
+              </div>
+              <%
+            for(let realpet of realpets){ 
+              if (realpet.nickname == nickname) {
+                idx++;
+                continue;
+              }
+              let pet = pets.find(p => (p.id == realpet.species));
+              if (typeof(pet) === 'undefined') {
+                continue;
+              }
+              if (idx<4){ %>    
+                <div
+                    onclick="myFunction('<%= realpet.nickname %>')"
+                    style="
+                      opacity: 1;
+                      background-image: url('<%= pet.img %>');
+                      background-size: cover;"
+                    class="my-pet bottom-square-button-<%=(idx++);%> bottom-square-button-4">
+                </div>
+              <% } %>
+          <% } 
+          let i = 1;
+          items.forEach(item => {
+          if (i++ < items.length) {
+          %>
+          <div class="item group-<%=i%> group">
+            <div 
+            class="bottom-square-button"
+            style="
+              opacity: 1;
+              background-image: url('<%= item.imgtrans %>');
+              background-size: cover;"
+            ></div>
+            <div class="image-t-container">
+              <div class="image-title image inter-bold-white-10px"><%= item.name %></div>
+              <p class="image-text image inter-extra-light-white-10px">
+                This text describes this item and the things it does so you can describe it that way
+              </p>
+            </div>
+          </div>
+          <% }
+        });%>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    const btn = document.querySelector("button");
+
+function sendData(data) {
+  console.log("Sending data");
+
+  const XHR = new XMLHttpRequest();
+
+  const urlEncodedDataPairs = [];
+
+  // Turn the data object into an array of URL-encoded key/value pairs.
+  for (const [name, value] of Object.entries(data)) {
+    urlEncodedDataPairs.push(
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
+    );
+  }
+
+  // Combine the pairs into a single string and replace all %-encoded spaces to
+  // the '+' character; matches the behavior of browser form submissions.
+  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
+
+  // Define what happens on successful data submission
+  XHR.addEventListener("load", (event) => {
+    alert("Yeah! Data sent and response loaded.");
+  });
+
+  // Define what happens in case of an error
+  XHR.addEventListener("error", (event) => {
+    alert("Oops! Something went wrong.");
+  });
+
+  // Set up our request
+  XHR.open("POST", "https://example.com/cors.php");
+
+  // Add the required HTTP header for form data POST requests
+  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // Finally, send our data.
+  XHR.send(urlEncodedData);
+}
+
+btn.addEventListener("click", () => {
+  sendData({ test: "ok" });
+});
+
+  function myFunction(nickname){
+    console.log(nickname);
+  }
+    
+    
+  </script>

@@ -1,0 +1,29 @@
+<% layout('/layouts/boilerplate') -%>
+  <body style="margin: 0">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="h1">Adopt a Pet</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+        </div>
+      </div>
+      <div class="row">
+        <% pets.forEach(pet => { %>
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="<%= pet.img %>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= pet.name %></h5>
+                <p class="card-text"><%= pet.description %></p>
+                <a href="/adopt/details/bs<%= pet.id %>" class="btn btn-primary">Adopt Me!</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+  </body>
+

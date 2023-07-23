@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        @font-face {
+            font-family: Metropolis-Black;
+            src: url(Metropolis-Black.ttf);
+        }
+        img {
+            position: relative;
+            bottom: 50%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+        }
+        a, form {
+            display: inline-block;
+            padding-right: 10px;
+        }
+        name {
+            color: white;
+            font-size: 90px;
+            font-family: sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+        }
+
+        section {
+            position: absolute;
+            margin-top: 10em;
+            background-image: 
+            linear-gradient(to right, 
+            <%= pet.gradLeft %>1F, <%= pet.gradRight %>1F), 
+            url('<%= pet.background %>');
+            background-position: center;
+            border-radius: 4em;
+            width: 80%;
+            height: 400px;
+            width: 600px;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            box-shadow: 60px 60px 100px #888888;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <name><%= pet.name %></name>
+        <img id="xeopet" src="<%= "" + pet.imgtrans + "" %>">
+    </section>
+    <a href="/pets">Go Back</a>
+    <a href="/pets/<%= pet._id %>/edit">Edit</a>
+    <form action="/pets/<%= pet._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<% layout('/layouts/boilerplate') -%>
+
+<form>
+    <% for(let pet of pets){ %>
+        <div>
+            <img id="xeopet" src="<%= "" + pet.img + "" %>">
+            <input type="radio" name="name" value="<%= pet.name %>">
+            <label for="<%= pet.name %>"><%= pet.name %></label>
+        </div>
+    <% } %>
+    <input type="submit" value="Adopt Pet">
+</form>

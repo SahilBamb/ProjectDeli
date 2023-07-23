@@ -1,0 +1,53 @@
+<% layout('/layouts/boilerplate') -%>
+  <link rel="stylesheet" type="text/css" href="css/macbook-pro-14-1.css" />
+  <link rel="stylesheet" type="text/css" href="css/home-styleguide.css" />
+  <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  <body style="margin: 0; background: #7ad0f4">
+    <input type="hidden" id="anPageName" name="page" value="macbook-pro-14-1" />
+    <div class="container-center-horizontal">
+      <div class="macbook-pro-14-1 screen">
+        <div class="overlap-group-container">
+          <div class="overlap-group6">
+            <div class="nav-bar">
+              <div class="x-button-container">
+                <div class="x-button"></div>
+                <div class="x-button-1"></div>
+                <div class="x-button-2"></div>
+              </div>
+              <div class="flex-row">
+                <img class="vector" src="img/vector.svg" alt="Vector" />
+                <div class="overlap-group">
+                  <div class="search"></div>
+                </div>
+              </div>
+            </div>
+            <div class="welcome-to-xeopets">Welcome to Xeopets!</div>
+          </div>
+          <div class="overlap-group-container-1">
+            <div class="overlap-group5">
+              <h1 class="title">Xeopets</h1>
+              <img class="girl" src="img/girl.png" alt="girl" />
+            </div>
+            <div id="clickableButton" class="overlap-group4"><div class="adopt-a-pet">Adopt a Xeo!</div></div>
+            <div id="clickableButton2" class="overlap-group2"><div class="join-adventure">Go to Profile</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+  window.addEventListener('load', () => {
+    
+    const elem = document.getElementById('clickableButton');
+    elem.addEventListener('click', () => {
+      window.location.href = '/adopt';
+    });
+
+    const elem2 = document.getElementById('clickableButton2');
+    elem2.addEventListener('click', () => {
+      window.location.href = '/profile';
+    });
+
+  });
+
+</script>
